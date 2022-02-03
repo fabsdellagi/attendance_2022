@@ -6,6 +6,8 @@
 
         $results = $crud->getSpecialties();    
 ?>
+
+
     <!-- 
         - First Name
         - Last Name

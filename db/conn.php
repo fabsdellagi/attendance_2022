@@ -1,5 +1,16 @@
 <?php
-    require_once 'localsettings.php';
+    //require_once 'localsettings.php';
+
+    require 'vendor/autoload.php';
+
+    //echo "***** FROM conn.php before defining DB_NAME *****<br/>";
+    $dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    //in next line load $dbname with its value from GLOBAL ENV VARIABLE $_ENV['DB_NAME'] 
+    //$dbname = $_ENV['DB_NAME'];
+    //echo "HERE YOU GO WITH YOUR DB_NAME=$dbname" . "<br/>";
+
+    //echo 'local dbname=' . getenv('DB_NAME') . '<br/>';
 
     $host = getenv('DB_HOST');
     $db = getenv('DB_NAME');
@@ -7,10 +18,10 @@
     $pass = getenv('DB_PASSWORD');
     $charset = getenv('DB_CHARSET');
 
-    //echo "DB_HOST=$host";
-    //echo "DB_NAME=$db";
-    //echo "DB_USER=$user";
-    //echo "DB_PASSWORD=$pass";
+    //echo "DB_HOST=$host\r\n";
+    //echo "DB_NAME=$db\r\n";
+    //echo "DB_USER=$user\r\n";
+    //echo "DB_PASSWORD=$pass\r\n";
 
 
     $options = [
