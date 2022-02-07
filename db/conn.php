@@ -4,8 +4,8 @@
     require 'vendor/autoload.php';
 
     echo "***** FROM conn.php before loading dotenv ***** <br/>";
-    $dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
+    //$dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
+    //$dotenv->load();
     //in next line load $dbname with its value from GLOBAL ENV VARIABLE $_ENV['DB_NAME'] 
     //$dbname = $_ENV['DB_NAME'];
 
