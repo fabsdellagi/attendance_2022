@@ -18,10 +18,11 @@
     $pass = getenv('DB_PASSWORD');
     $charset = getenv('DB_CHARSET');
 
-    //echo "DB_HOST=$host\r\n";
-    //echo "DB_NAME=$db\r\n";
-    //echo "DB_USER=$user\r\n";
-    //echo "DB_PASSWORD=$pass\r\n";
+    echo "DB_HOST=$host <br/>";
+    echo "DB_NAME=$db <br/>";
+    echo "DB_USER=$user <br/>";
+    //echo "DB_PASSWORD=$pass <br/>";
+    echo "DB_CHARSET=$charset <br/>";
 
 
     $options = [
