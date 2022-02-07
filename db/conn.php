@@ -13,11 +13,17 @@
 
     //echo 'local dbname=' . getenv('DB_NAME') . '<br/>';
 
-    $host = getenv('DB_HOST');
-    $db = getenv('DB_NAME');
-    $user = getenv('DB_USER');
-    $pass = getenv('DB_PASSWORD');
-    $charset = getenv('DB_CHARSET');
+    //$host = getenv('DB_HOST');
+    //$db = getenv('DB_NAME');
+    //$user = getenv('DB_USER');
+    //$pass = getenv('DB_PASSWORD');
+    //$charset = getenv('DB_CHARSET');
+
+    $host =  $_ENV['DB_HOST'];
+    $db = $_ENV['DB_NAME'];
+    $user = $_ENV['DB_USER'];
+    $pass = $_ENV['DB_PASSWORD'];
+    $charset = $_ENV['DB_CHARSET'];
 
     echo "DB_HOST=$host <br/>";
     echo "DB_NAME=$db <br/>";
