@@ -3,12 +3,13 @@
 
     require 'vendor/autoload.php';
 
-    //echo "***** FROM conn.php before defining DB_NAME *****<br/>";
+    echo "***** FROM conn.php before loading dotenv ***** <br/>";
     $dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
     //in next line load $dbname with its value from GLOBAL ENV VARIABLE $_ENV['DB_NAME'] 
     //$dbname = $_ENV['DB_NAME'];
-    //echo "HERE YOU GO WITH YOUR DB_NAME=$dbname" . "<br/>";
+
+    echo "FROM conn.php just after loading dotenv:  " . "<br/>";
 
     //echo 'local dbname=' . getenv('DB_NAME') . '<br/>';
 
