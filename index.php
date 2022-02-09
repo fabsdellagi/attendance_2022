@@ -6,19 +6,19 @@
 
         $results = $crud->getSpecialties();    
 
-        $host = getenv('DB_HOST');
-        $db = getenv('DB_NAME');
-        $user = getenv('DB_USER');
-        $pass = getenv('DB_PASSWORD');
-        $charset = getenv('DB_CHARSET');
-
-        echo "DB_HOST=$host <br/>";
-        echo "DB_NAME=$db <br/>";
-        echo "DB_USER=$user <br/>";
+        // *******  START DEBUGGING   **********
+        //$host = getenv('DB_HOST');
+        //$db = getenv('DB_NAME');
+        //$user = getenv('DB_USER');
+        //$pass = getenv('DB_PASSWORD');
+        //$charset = getenv('DB_CHARSET');
+        //echo "DB_HOST=$host <br/>";
+        //echo "DB_NAME=$db <br/>";
+        //echo "DB_USER=$user <br/>";
         //echo "DB_PASSWORD=$pass <br/>";
-        echo "DB_CHARSET=$charset <br/>";
+        //echo "DB_CHARSET=$charset <br/>";
+        // *******  END DEBUGGING   **********
 ?>
-
 
     <!-- 
         - First Name

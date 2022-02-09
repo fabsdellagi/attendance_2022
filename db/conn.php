@@ -3,19 +3,20 @@
 
     require 'vendor/autoload.php';
 
-    echo "***** FROM conn.php before loading dotenv ***** <br/>";
+    //echo "***** FROM conn.php before loading dotenv ***** <br/>";
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //**** Use Dotenv in development environment ONLY ****
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     $app_env = getenv('APP_ENV');
     if($app_env != 'production') {
         $dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
         $dotenv->load();
     }
-    //$dotenv=Dotenv\Dotenv::createImmutable(__DIR__);
-    //$dotenv->load();
+    
     //in next line load $dbname with its value from GLOBAL ENV VARIABLE $_ENV['DB_NAME'] 
     //$dbname = $_ENV['DB_NAME'];
 
-    echo "FROM conn.php just after loading dotenv:  " . "<br/>";
+    //echo "FROM conn.php just after loading dotenv:  " . "<br/>";
 
     //echo 'local dbname=' . getenv('DB_NAME') . '<br/>';
 
@@ -31,12 +32,14 @@
     //$pass = $_ENV['DB_PASSWORD'];
     //$charset = $_ENV['DB_CHARSET'];
 
-    echo "APP_ENV=$app_env <br/>";
-    echo "DB_HOST=$host <br/>";
-    echo "DB_NAME=$db <br/>";
-    echo "DB_USER=$user <br/>";
+    // *******  START DEBUGGING   **********
+    //echo "APP_ENV=$app_env <br/>";
+    //echo "DB_HOST=$host <br/>";
+    //echo "DB_NAME=$db <br/>";
+    //echo "DB_USER=$user <br/>";
     //echo "DB_PASSWORD=$pass <br/>";
-    echo "DB_CHARSET=$charset <br/>";
+    //echo "DB_CHARSET=$charset <br/>";  
+    // *******  END DEBUGGING   **********
 
 
     $options = [
